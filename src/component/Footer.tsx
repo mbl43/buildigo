@@ -7,7 +7,7 @@ function Footer() {
         <div className="">
           <h2 className="font-bold text-2xl my-6">Construction</h2>
           <p className="text-base">
-            You'll find your next Home loan value you prefer. in Resources Our
+            You&#39;ll find your next Home loan value you prefer. in Resources Our
             Agents Member.
           </p>
           <div className="flex flex-row flex-wrap gap-4 my-5 md:justify-start justify-center">
