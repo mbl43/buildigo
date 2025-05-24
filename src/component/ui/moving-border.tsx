@@ -7,7 +7,7 @@ import {
   useMotionTemplate,
   useMotionValue,
   useTransform,
-} from "motion/react"; // or "framer-motion" if you use that
+} from "motion/react";
 import { cn } from "@/utils/cn";
 
 type ButtonProps = {
@@ -18,7 +18,7 @@ type ButtonProps = {
   borderClassName?: string;
   duration?: number;
   className?: string;
-  [key: string]: any;
+  [key: string]: unknown;
 };
 
 export function Button({
@@ -72,7 +72,7 @@ type MovingBorderProps = {
   duration?: number;
   rx?: string;
   ry?: string;
-  [key: string]: any;
+  [key: string]: unknown;
 };
 
 export const MovingBorder = ({
@@ -95,11 +95,11 @@ export const MovingBorder = ({
 
   const x = useTransform(
     progress,
-    (val) => pathRef.current?.getPointAtLength(val).x ?? 0
+    (val) => pathRef.current?.getPointAtLength(val)?.x ?? 0
   );
   const y = useTransform(
     progress,
-    (val) => pathRef.current?.getPointAtLength(val).y ?? 0
+    (val) => pathRef.current?.getPointAtLength(val)?.y ?? 0
   );
 
   const transform = useMotionTemplate`translateX(${x}px) translateY(${y}px) translateX(-50%) translateY(-50%)`;
