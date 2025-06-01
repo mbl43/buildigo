@@ -4,7 +4,7 @@ import { InfiniteMovingCards } from "./ui/infinite-moving-cards";
 import { cn } from "@/utils/cn";
 const Team = () => {
   return (
-        <div className="relative flex h-[40rem] w-full items-center justify-center bg-black flex-col">
+        <div className="relative overflow-hidden flex h-[40rem] w-full items-center justify-center bg-black flex-col">
 
         <div
         className={cn(
