@@ -9,13 +9,16 @@ export default function Navbar({ className }: { className?: string }) {
   const [active, setActive] = useState<string | null>(null);
   return (
     <div
-      className={cn("fixed top-10 inset-x-2 max-w-screen md:max-w-xl mx-auto z-50", className)}
+      className={cn(
+        "fixed top-10 inset-x-2 max-w-screen md:max-w-xl mx-auto z-50",
+        className
+      )}
     >
       <Menu setActive={setActive}>
         <div className="ml-2 md:ml-0 relative">
-          <Image src={Icon} alt="icon" className="w-8 invert"/>
+          <Image src={Icon} alt="icon" className="w-8 invert" />
         </div>
-       <div className="flex space-x-4 md:space-x-8 items-center justify-between mr-2 md:mr-0 relative">
+        <div className="flex space-x-2 md:space-x-8 items-center justify-between mr-2 md:mr-0 relative">
           <Link href={"/"}>
             <MenuItem
               setActive={setActive}
@@ -47,7 +50,7 @@ export default function Navbar({ className }: { className?: string }) {
               item="Contact"
             ></MenuItem>
           </Link>
-       </div>
+        </div>
       </Menu>
     </div>
   );
